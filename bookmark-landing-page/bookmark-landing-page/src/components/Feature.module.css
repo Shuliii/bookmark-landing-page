@@ -28,3 +28,80 @@
   color: var(--colour-dark);
   margin-top: 16px;
 }
+
+.tabs {
+  max-width: 730px;
+  margin-inline: auto;
+  margin-top: 72px;
+}
+
+.tabs > ul {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(73, 93, 207, 0.2);
+}
+
+.tabs > ul > li {
+  font-weight: 400;
+  padding-bottom: 31px;
+  flex: 1 1 0;
+  font-size: 16px;
+  line-height: 17px;
+  letter-spacing: 0.53px;
+  opacity: 0.75;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tabs > ul > li.active {
+  opacity: 1;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  background-color: var(--colour-accent);
+  height: 4px;
+  width: 100%;
+}
+
+.tabs__content {
+  margin-top: 72px;
+  max-width: 1106px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 445px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.right > h1 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 52px;
+  letter-spacing: -0.1px;
+  color: var(--colour-dark);
+}
+
+.right > p {
+  margin-top: 16px;
+  opacity: 0.5;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: var(--colour-dark);
+}

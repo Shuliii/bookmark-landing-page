@@ -1,0 +1,13 @@
+.download {
+  margin-top: 238px;
+}
+
+.download__inner {
+  max-width: 541px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+}
