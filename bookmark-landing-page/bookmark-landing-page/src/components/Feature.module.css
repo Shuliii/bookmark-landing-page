@@ -64,7 +64,7 @@
   opacity: 1;
 }
 
-.active::after {
+.tabs > ul > li.active::after {
   content: "";
   position: absolute;
   left: 0;
@@ -81,6 +81,12 @@
   margin-inline: auto;
   display: grid;
   grid-template-columns: 1fr 445px;
+}
+
+.left img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .right {

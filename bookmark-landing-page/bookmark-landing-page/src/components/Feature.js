@@ -6,10 +6,10 @@ import Feature2 from "../assets/illustration-features-tab-2.svg";
 
 import Feature3 from "../assets/illustration-features-tab-3.svg";
 const Feature = () => {
-  const [state, setState] = useState("bookmarking");
+  const [active, setActive] = useState("bookmarking");
 
   const renderTabContent = () => {
-    switch (state) {
+    switch (active) {
       case "bookmarking":
         return (
           <>
@@ -56,6 +56,8 @@ const Feature = () => {
             </div>
           </>
         );
+      default:
+        return null;
     }
   };
   return (
@@ -73,20 +75,20 @@ const Feature = () => {
       <nav className={styles.tabs}>
         <ul>
           <li
-            className={state === "bookmarking" ? styles.active : ""}
-            onClick={() => setState("bookmarking")}
+            className={active === "bookmarking" ? styles.active : ""}
+            onClick={() => setActive("bookmarking")}
           >
             Simple Bookmarking
           </li>
           <li
-            className={state === "searching" ? styles.active : ""}
-            onClick={() => setState("searching")}
+            className={active === "searching" ? styles.active : ""}
+            onClick={() => setActive("searching")}
           >
             Speedy Searching
           </li>
           <li
-            className={state === "sharing" ? styles.active : ""}
-            onClick={() => setState("sharing")}
+            className={active === "sharing" ? styles.active : ""}
+            onClick={() => setActive("sharing")}
           >
             Easy Sharing
           </li>
