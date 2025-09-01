@@ -1,3 +1,5 @@
+import BlueButton from "./UI/BlueButton";
+
 import styles from "./Hero.module.css";
 
 import HeroImg from "../assets/illustration-hero.svg";
@@ -15,7 +17,9 @@ const Hero = () => {
               for free.
             </p>
             <div className={styles.button__container}>
-              <button className={styles.blue__button}>Get it on Chrome</button>
+              <BlueButton className={styles.blue__button}>
+                Get it on Chrome
+              </BlueButton>
               <button className={styles.white__button}>
                 Get it on Firefox
               </button>
